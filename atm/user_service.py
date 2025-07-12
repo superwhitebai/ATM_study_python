@@ -44,6 +44,3 @@ def login():
                 return None
     print('用户不存在')
     return None
-
-zwl = register()
-zwllist = login()
