@@ -4,3 +4,8 @@
 # @Author  : 地核桃
 # @file: utils.py
 # @desc:
+
+import json
+import os
+
+USER_DATA_FILE= 'user_data.json'
