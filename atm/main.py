@@ -12,7 +12,7 @@ from atm import bank_service
 def main():
     while True:
         if user_service.current_user is None:
-            print("\n欢迎使用Wenl的 ATM，请输入需要进行的操作，例如，注册、登录、退出")
+            print("\n欢迎使用Wenl的 ATM,请选择操作：取款、存款、转账、查看交易记录、退出登录")
             action = input().strip()
             if action == "退出":
                 print("感谢使用，再见！")
@@ -35,6 +35,8 @@ def main():
                             bank_service.withdraw(user_service.current_user)
                         elif operation == "转账":
                             bank_service.transfer(user_service.current_user)
+                        elif operation == "查看交易记录":
+                            bank_service.view_transactions(user_service.current_user)
                         else:
                             print("无效操作，请重新输入")
             else:
