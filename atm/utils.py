@@ -8,10 +8,14 @@
 import json
 import os
 import hashlib
+
 USER_DATA_FILE= 'user_data.json'
 
+# 定义一个函数，用于保存用户数据
 def save_users(users):
+    # 打开用户数据文件，以写入模式，编码为utf-8
     with open(USER_DATA_FILE, "w", encoding="utf-8") as f:
+        # 将用户数据以json格式写入文件，不使用ascii编码，缩进为4
         json.dump(users, f, ensure_ascii=False, indent=4)
 
 # 定义一个函数，用于加载用户数据
