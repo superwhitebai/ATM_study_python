@@ -72,7 +72,4 @@ def login():
                 return None
     # 打印用户不存在
     print('用户不存在')
-    # 返回None
-    return None
-
 
